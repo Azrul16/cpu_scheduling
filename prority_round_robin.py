@@ -16,7 +16,7 @@ def get_processes():
         pid = f"P{i+1}"
         at = int(input(f"Enter arrival time for {pid}: "))
         bt = int(input(f"Enter burst time for {pid}: "))
-        prio = int(input(f"Enter priority for {pid} (higher number = higher priority): "))
+        prio = int(input(f"Enter priority for {pid} : "))
         processes.append(Process(pid, at, bt, prio))
     return processes
 
@@ -80,6 +80,5 @@ def priority_round_robin():
     print_results(processes, quantum)
 
 if __name__ == "__main__":
-    print("=== Priority-Based Round Robin Scheduling ===")
-    print("Note: Higher priority numbers indicate higher priority\n")
+    print("Priority-Based Round Robin Scheduling")
     priority_round_robin()
